@@ -91,10 +91,6 @@
             "image": "laravel.svg"
           },
           {
-            "name": "Blade",
-            "image": "blade.svg"
-          },
-          {
             "name": "Docker",
             "image": "docker.svg"
           }
