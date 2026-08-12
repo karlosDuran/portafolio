@@ -1,0 +1,312 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	language: string;
+}
+
+const { title, description, language } = Astro.props;
+
+const keywords = 'portfolio, developer, web, app, full-stack, javascript, '
+	+ 'typescript, nodejs, express, mongodb, postgresql, mysql, rest, api, '
+	+ 'website, app, responsive, design, ui, ux, interface, user, experience, '
+	+ 'user interface, user experience, frontend, backend, fullstack, full-stack, '
+	+ 'full stack, developer, programmer, software, engineer, software engineer';
+const author = 'Marco Cruz';
+const robots = 'index, follow';
+
+const og = {
+  title,
+  description,
+  url: 'https://marco-cruz.netlify.app/',
+  image: 'https://res.cloudinary.com/dfeujtobk/image/upload/v1705960644'
+		+ '/Portfolio/840shots_so_d3ber6.png',
+};
+---
+
+<!doctype html>
+<html lang={language}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="theme-color" content="#3b82f6" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3b82f6" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="author" content={author} />
+		<meta name="language" content={language} />
+		<meta name="robots" content={robots} />
+		<meta property="og:title" content={og.title} />
+		<meta property="og:description" content={og.description} />
+		<meta property="og:url" content={og.url} />
+		<meta property="og:image" content={og.image} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:title" content={og.title} />
+		<meta name="twitter:description" content={og.description} />
+		<meta name="twitter:url" content={og.url} />
+		<meta name="twitter:image" content={og.image} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--bg-color: #f0f2f5;
+		--bg-color-2: #3b82f6a3;
+		--bg-color-scroll: #b0b0b0;
+		--font-color: #1a1a2e;
+		--font-color-2: #3a3a5c;
+		--primary-color: #3b82f6;
+		--second-color: #1f2937;
+		--third-color: #e7e9ea;
+		--bg-color-button: rgba(255, 255, 255, 0.25);
+		--bg-color-button-2: #3b82f6;
+		--bg-color-button-hover: rgba(255, 255, 255, 0.4);
+		--bg-color-tooltip: rgba(255, 255, 255, 0.7);
+		--bg-dark3: #6b7280;
+		--border-color: rgba(255, 255, 255, 0.35);
+		--border-color-nav: rgba(255, 255, 255, 0.3);
+		--bg-color-badge: rgba(255, 255, 255, 0.15);
+		--text-shadow-color: rgba(0, 0, 0, 0.1);
+		--glass-bg: rgba(255, 255, 255, 0.12);
+		--glass-border: rgba(255, 255, 255, 0.35);
+		--glass-hover-border: rgba(59, 130, 246, 0.5);
+		--glass-hover-shadow: rgba(59, 130, 246, 0.25);
+	}
+
+	body {
+		color: var(--font-color);
+		transition: color 0.7s ease;
+		background:
+			radial-gradient(ellipse at 20% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+			radial-gradient(ellipse at 80% 100%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+			radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 60%),
+			linear-gradient(160deg, #e8ecf3 0%, #f0f2f5 40%, #e4e7ef 100%);
+		background-attachment: fixed;
+		min-height: 100vh;
+		position: relative;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: -1;
+		background:
+			radial-gradient(ellipse at 20% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+			radial-gradient(ellipse at 80% 100%, rgba(147, 51, 234, 0.06) 0%, transparent 50%),
+			linear-gradient(160deg, #12131e 0%, #0d0e15 40%, #080810 100%);
+		opacity: 0;
+		transition: opacity 0.7s ease;
+		pointer-events: none;
+	}
+
+	body.dark-theme::before {
+		opacity: 1;
+	}
+
+	body.dark-theme {
+		--bg-color: #0d0e15;
+		--bg-color-2: #3b82f6;
+		--font-color: #f0f0f5;
+		--font-color-2: #c0c0d0;
+		--bg-color-button: rgba(255, 255, 255, 0.06);
+		--bg-color-button-2: #e7e9ea;
+		--bg-color-button-hover: rgba(255, 255, 255, 0.12);
+		--bg-color-tooltip: rgba(20, 20, 35, 0.85);
+		--bg-dark3: #d1d5db;
+		--border-color: rgba(255, 255, 255, 0.1);
+		--border-color-nav: rgba(255, 255, 255, 0.1);
+		--bg-color-badge: rgba(255, 255, 255, 0.08);
+		--text-shadow-color: #000000;
+		--glass-bg: rgba(255, 255, 255, 0.04);
+		--glass-border: rgba(255, 255, 255, 0.1);
+		--glass-hover-border: rgba(0, 255, 255, 0.5);
+		--glass-hover-shadow: rgba(0, 255, 255, 0.25);
+	}
+
+	::-webkit-scrollbar {
+		width: 6px;
+		background-color: var(--bg-color);
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: var(--bg-color);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--bg-color-scroll);
+		border-radius: 1rem;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--bg-color-scroll);
+		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: var(--bg-color-scroll);
+	}
+
+	html {
+		scroll-behavior: smooth;
+		font-family: "Space Grotesk", system-ui, sans-serif;
+	}
+
+	p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+	button,
+	button.btn,
+	a.btn {
+		font-family: inherit;
+		border-radius: 8px;
+		border: none;
+		background-color: var(--primary-color);
+		color: var(--third-color);
+		padding: 12px 16px;
+		cursor: pointer;
+		height: 44px;
+		font-size: 17px;
+		min-width: 64px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		transition: 0.25s;
+		font-weight: 600;
+		text-decoration: none;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+		gap: 0.5rem;
+	}
+
+	button:hover,
+	a.btn:hover {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--bg-dark3);
+		transform: translateY(-0.25em);
+	}
+
+	section {
+		width: 100%;
+		padding: 3rem 0;
+	}
+
+	section > .title {
+		font-weight: 600;
+		font-size: 2.8rem;
+		margin-bottom: 2.5rem;
+		align-self: flex-start;
+		color: var(--font-color);
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	@media (max-width: 900px) {
+		h1.title,
+		.title {
+			font-size: 46px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		section > .title {
+			font-size: 28px;
+			gap: 0.8rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Light.ttf');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Medium.ttf');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Bold.ttf');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Yellowtail';
+		src: url('/fonts/yellowtail/Yellowtail-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+</style>
+
+<script>
+  const body = document.body;
+  const theme = localStorage.getItem('theme');
+  const darkThemeName = 'dark-theme';
+
+  const savePreference = (theme: string) => {
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', theme);
+  }
+
+  const setTheme = (theme: string) => {
+    if(theme === 'light') {
+      body.classList.remove(darkThemeName);
+    }
+    if(theme === darkThemeName) {
+      body.classList.add(darkThemeName);
+    }
+    savePreference(theme);
+  }
+
+  if(!theme) {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme((isDarkMode) ? darkThemeName : 'light');
+  } else {
+    setTheme(theme);
+  }
+</script>

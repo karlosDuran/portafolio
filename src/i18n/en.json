@@ -1,0 +1,181 @@
+{
+  "LANGUAGE": "en",
+  "SEO_TITLE": "Karlos Duran - Portfolio EN",
+  "SEO_DESCRIPTION": "Explore my portfolio to see my projects and skills. I'm a full-stack developer and I love to create websites and apps.",
+  "HERO_SECTION": {
+    "TITLE": "Hello there!",
+    "TITLE_NAV": "Home",
+    "SUBTITLE_NORMAL": "I'm",
+    "SUBTITLE_EMPHASIS": "Karlos Duran",
+    "JOB_TITLE": "Developer",
+    "CV": {
+      "BTN_TEXT": "Download CV",
+      "FILENAME": "karlos-duran-cv-en.pdf",
+      "PATH": "pdf/karlos-duran-cv-en.pdf",
+      "ARIA_LABEL": "Download CV of Karlos Duran in english"
+    },
+    "IMAGE": {
+      "ALT": "Karlos Duran - Developer"
+    }
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "About me",
+    "DESCRIPTION_1": "I'm a Software Engineering student focused on technical problem-solving and data quality. My experience as a <strong>Full Stack Developer</strong> has allowed me to work under agile methodologies, collaborating on data management with MySQL and integration with PHP systems.",
+    "DESCRIPTION_2": "I have advanced knowledge of <strong>Linux</strong>, <strong>Docker</strong> containers, and Git version control. I hold certifications from <strong>Google Cybersecurity</strong>, <strong>AWS Cloud Foundations</strong>, and Cisco Networking Basics. English B2 (iTEP Plus certification).",
+    "DESCRIPTION_3": "Currently seeking opportunities where I can apply my skills in <strong>web development and systems administration</strong> to create solutions with real impact.",
+    "IMAGE": {
+      "ALT": "Karlos Duran - About me"
+    }
+  },
+  "EXPERIENCE_SECTION": {
+    "TITLE": "Experience",
+    "JOBS": [
+      {
+        "COMPANY": "Centro de Investigaciones Regionales \"Dr. Hideyo Noguchi\"",
+        "ROLE": "Full Stack Developer",
+        "DURATION": "September 2025 - August 2026",
+        "BULLETS": [
+          "Data integration: Programming seeders and scripts for structured data injection in MySQL.",
+          "Development and support: Database integration with PHP (PDO) systems to ensure service continuity.",
+          "Methodology: Requirements and issue management using Scrum and Jira.",
+          "Infrastructure: Deployment of environments using Docker and Linux."
+        ]
+      }
+    ]
+  },
+  "SKILLS_SECTION": {
+    "TITLE": "Skills",
+    "TITLES": {
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend / DB",
+      "OTHERS": "Tools",
+      "LEARNING": "Learning"
+    }
+  },
+  "PORTFOLIO_SECTION": {
+    "TITLE": "Projects",
+    "BUTTONS": {
+      "BTN_GITHUB": "Code",
+      "BTN_PRODUCTION": "Demo",
+      "BTN_MORE_PROJECTS": "Show more..."
+    },
+    "PROJECTS": [
+      {
+        "name": "School Control System",
+        "description": "Collaboratively developed educational platform using TypeScript, with environment deployment and standardization via Docker.",
+        "image": "images/portfolio/control-escolar-web.png",
+        "technologies": [
+          {
+            "name": "TypeScript",
+            "image": "ts.svg"
+          },
+          {
+            "name": "Docker",
+            "image": "docker.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/team-ControlAcademico/controlEscolar-web",
+        "urlProduction": ""
+      },
+      {
+        "name": "Medical Appointments Manager",
+        "description": "Web application built with PHP, Laravel and Blade for information and consultation management, deployed in Docker containers.",
+        "image": "images/portfolio/doctor-appointment-app.jpg",
+        "technologies": [
+          {
+            "name": "PHP",
+            "image": "php.svg"
+          },
+          {
+            "name": "Laravel",
+            "image": "laravel.svg"
+          },
+          {
+            "name": "Blade",
+            "image": "blade.svg"
+          },
+          {
+            "name": "Docker",
+            "image": "docker.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/karlosDuran/doctor-appointment-app",
+        "urlProduction": ""
+      },
+      {
+        "name": "Market App",
+        "description": "E-commerce application backend with shopping cart and product catalog.",
+        "image": "images/portfolio/market-app.jpg",
+        "technologies": [
+          {
+            "name": "Java",
+            "image": "java.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/karlosDuran/market-app",
+        "urlProduction": ""
+      },
+      {
+        "name": "Convertnut Web",
+        "description": "Web platform for data format conversion and management. (Developed as part of my professional experience)",
+        "image": "images/portfolio/convertnut.png",
+        "technologies": [
+          {
+            "name": "TypeScript",
+            "image": "ts.svg"
+          },
+          {
+            "name": "HTML",
+            "image": "html.svg"
+          },
+          {
+            "name": "CSS",
+            "image": "css.svg"
+          },
+          {
+            "name": "PrimeNG",
+            "image": "primeng.svg"
+          },
+          {
+            "name": "CakePHP 2.2",
+            "image": "cakephp.svg"
+          },
+          {
+            "name": "PHP",
+            "image": "php.svg"
+          }
+        ],
+        "urlGithub": "",
+        "urlProduction": ""
+      },
+      {
+        "name": "SACPUVE Android",
+        "description": "Mobile application for Android focused on the control and management of the SACPUVE system. (Developed as part of my professional experience)",
+        "image": "images/portfolio/sacpuve-android.png",
+        "technologies": [
+          {
+            "name": "Java",
+            "image": "java.svg"
+          },
+          {
+            "name": "Android SDK 36",
+            "image": "android.svg"
+          }
+        ],
+        "urlGithub": "",
+        "urlProduction": ""
+      }
+    ]
+  },
+  "CONTACT_SECTION": {
+    "TITLE": "Contact me",
+    "DESCRIPTION": "I am currently looking for new opportunities, my inbox is always open!"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Designed & Built by"
+  },
+  "THEME": {
+    "DARK_THEME": "Dark theme",
+    "LIGHT_THEME": "Light theme"
+  }
+}

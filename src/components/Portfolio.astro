@@ -1,0 +1,310 @@
+---
+import CodeIcon from '@components/icons/code-icon.astro';
+import ExternalIcon from '@components/icons/external-icon.astro';
+import GithubIcon from '@components/icons/github-icon.astro';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
+const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
+---
+
+<section id="portfolio">
+  <span class="title">
+    <CodeIcon />
+    {i18n.PORTFOLIO_SECTION.TITLE}
+  </span>
+
+  <div class="projects">
+    {
+      projects.map((project) => (
+        <div class="project">
+          <div class="image-wrapper">
+            {project.urlProduction ? (
+              <a href={project.urlProduction} target="_blank" aria-label="project-preview">
+                <picture class="project-preview">
+                  <img src={`/${project.image}`} alt="project-preview" loading="lazy">
+                </picture>
+              </a>
+            ) : (
+              <picture class="project-preview">
+                <img src={`/${project.image}`} alt="project-preview" loading="lazy">
+              </picture>
+            )}
+          </div>
+          <div class="description">
+            <span class="title">{project.name}</span>
+            <p class="body">{project.description}</p>
+            <div class="technologies">
+              {
+                project.technologies.map((tech) => (
+                  <picture class="tech">
+                    <img src={`/images/${tech.image}`} alt={tech.name} title={tech.name} loading="lazy" />
+                  </picture>
+                ))
+              }
+            </div>
+            <div class="links">
+              {project.urlGithub && (
+                <a
+                  class="btn icon"
+                  target="_blank"
+                  href={project.urlGithub}
+                  aria-label="github-repository"
+                  >
+                  {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_GITHUB} <GithubIcon width={26} height={26}/>
+                </a>
+              )}
+              {project.urlProduction && (
+                <a
+                    class="btn icon"
+                    target="_blank"
+                    href={project.urlProduction}
+                    aria-label="project-demo"
+                  >
+                  {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_PRODUCTION}
+                  <ExternalIcon width={26} height={26} />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="more">
+    <a
+      href="https://github.com/karlosDuran"
+      target="_blank"
+      class="btn"
+      aria-label="more-projects"
+      >
+      {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_MORE_PROJECTS}
+    </a>
+  </div>
+</section>
+
+<style>
+  .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .project:hover {
+    border-color: var(--glass-hover-border);
+    box-shadow:
+      0 0 20px var(--glass-hover-shadow),
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .description .technologies .tech {
+    height: 2.2rem;
+    width: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+  }
+
+  .description .technologies img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .image-wrapper {
+    flex: 1;
+    aspect-ratio: 16 / 10;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .project:nth-child(5n+1) .image-wrapper { background: linear-gradient(135deg, #f6d365, #fda085); }
+  .project:nth-child(5n+2) .image-wrapper { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+  .project:nth-child(5n+3) .image-wrapper { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+  .project:nth-child(5n+4) .image-wrapper { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+  .project:nth-child(5n+5) .image-wrapper { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+
+  .image-wrapper a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project picture.project-preview {
+    border-radius: 0.8rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .project picture.project-preview img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.3s ease;
+  }
+
+  .description .technologies .technology {
+    height: 2.1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .project picture img:hover {
+    transition: 0.3s ease;
+  }
+
+  .description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1.8rem;
+    gap: 1.2rem;
+  }
+
+  .description .title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--font-color);
+    line-height: 1.2;
+  }
+
+  .description .body {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--font-color-2);
+    text-wrap: pretty;
+  }
+
+  .description .technologies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .description .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .description .links .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-button-2);
+    color: var(--bg-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+
+    .project {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+    }
+
+    .description .technologies .tech {
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+
+    .image-wrapper {
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .project picture.project-preview {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.8rem;
+    }
+
+    .project picture.project-preview img {
+      transform: translate(0, 0);
+    }
+
+    .description {
+      width: 100%;
+      line-height: 1.6rem;
+    }
+
+    .description .title {
+      font-size: 1.8rem;
+    }
+
+    .description .body {
+      font-size: 1rem;
+    }
+
+    .description .technologies {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .description .links {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+
+</style>

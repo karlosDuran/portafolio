@@ -1,0 +1,25 @@
+{
+  "cardsDataFrontend": [
+    { "name": "HTML", "imagePath": "/images/html.svg", "alt": "html" },
+    { "name": "CSS", "imagePath": "/images/css.svg", "alt": "css" },
+    { "name": "JavaScript", "imagePath": "/images/js.svg", "alt": "js" },
+    { "name": "TypeScript", "imagePath": "/images/ts.svg", "alt": "ts" },
+    { "name": "React", "imagePath": "/images/react.svg", "alt": "react" }
+  ],
+  "cardsDataBackend": [
+    { "name": "PHP", "imagePath": "/images/php.svg", "alt": "php" },
+    { "name": "MySql", "imagePath": "/images/mysql.webp", "alt": "mysql" },
+    { "name": "Java", "imagePath": "/images/java.svg", "alt": "java" },
+    { "name": "Docker", "imagePath": "/images/docker.svg", "alt": "docker" }
+  ],
+  "cardsDataOthers": [
+    { "name": "Linux", "imagePath": "/images/linux.svg", "alt": "linux" },
+    { "name": "Git", "imagePath": "/images/git.webp", "alt": "git" },
+    { "name": "Jira", "imagePath": "/images/jira.svg", "alt": "jira" },
+    { "name": "Figma", "imagePath": "/images/figma.webp", "alt": "figma" }
+  ],
+  "cardsDataLearning": [
+    { "name": "AWS", "imagePath": "/images/aws.svg", "alt": "aws" },
+    { "name": "Flutter", "imagePath": "/images/flutter.svg", "alt": "flutter" }
+  ]
+}

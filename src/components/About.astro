@@ -1,0 +1,89 @@
+---
+import UserIcon from '@components/icons/user-icon.astro';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
+---
+
+<section id="about">
+  <span class="title">
+    <UserIcon />
+    {i18n.ABOUT_SECTION.TITLE}
+  </span>
+  <div class="wrap">
+    <div class="description">
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_1}></p>
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_2}></p>
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_3}></p>
+    </div>
+    <div class="image">
+      <img src="/programming.webp" alt={i18n.ABOUT_SECTION.IMAGE.ALT}>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .description {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--font-color-1);
+    text-wrap: pretty;
+  }
+
+  .description p {
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    flex: 1;
+  }
+
+  section img {
+    object-fit: cover;
+    width: 22rem;
+    height: 20rem;
+    border-radius: 51% 49% 49% 51% / 49% 52% 48% 51%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    background: #3b82f6;
+  }
+
+  @media (max-width: 900px) {
+    section {
+      padding: 0;
+    }
+    section .description {
+      font-size: 18px;
+      max-width: 100%;
+    }
+
+    .wrap {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    section img {
+      width: 15rem;
+      height: 14rem;
+    }
+  }
+</style>

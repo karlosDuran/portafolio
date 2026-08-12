@@ -1,0 +1,211 @@
+---
+import CopyIcon from '@components/icons/copy-icon.astro';
+import EnvelopeIcon from '@components/icons/envelope-icon.astro';
+import GithubIcon from '@components/icons/github-icon.astro';
+import InstagramIcon from '@components/icons/instagram-icon.astro';
+import LinkedinIcon from '@components/icons/linkedin-icon.astro';
+import SendIcon from '@components/icons/send-icon.astro';
+import {
+  EMAIL_URL,
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+} from '@constants/urls';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
+---
+
+<section id="contact">
+  <span class="title">
+    <EnvelopeIcon />
+    {i18n.CONTACT_SECTION.TITLE}
+  </span>
+  <div class="container">
+    <p class="description">
+      {i18n.CONTACT_SECTION.DESCRIPTION}
+    </p>
+    <div class="email-wrapper">
+      <div class="email">
+        <span>{EMAIL_URL}</span>
+      </div>
+      <div class="buttons">
+        <a href={`mailto:${EMAIL_URL}`} class="btn icon" aria-label="Send email">
+          <SendIcon width={26} height={26} />
+        </a>
+        <button class="btn icon copy" aria-label="Copy email">
+          <CopyIcon width={26} height={26} />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="links">
+      <a target="_blank" href={GITHUB_URL} class="icon" aria-label="Github">
+        <GithubIcon />
+      </a>
+      <a target="_blank" href={INSTAGRAM_URL} class="icon" aria-label="Instagram">
+        <InstagramIcon />
+      </a>
+      <a target="_blank" href={LINKEDIN_URL} class="icon" aria-label="Linkedin">
+        <LinkedinIcon />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const copyToClipboard = () => {
+    const emailUrl = document.querySelector('.email span')?.textContent || '';
+    navigator.clipboard.writeText(emailUrl);
+  };
+
+  document.querySelector('.copy')?.addEventListener('click', () => {
+    copyToClipboard();
+  });
+</script>
+
+<style>
+  section#contact {
+    margin-bottom: 8rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 60%;
+    margin: 6rem auto;
+  }
+
+  .container .description {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--font-color);
+  }
+
+  .footer {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .links .icon {
+    font-size: 16px;
+    color: var(--font-color);
+    transition: 0.4s;
+  }
+
+  .links .icon:hover {
+    color: var(--primary-color);
+  }
+
+  .detail {
+    text-align: center;
+    color: var(--font-color-2);
+  }
+
+  .detail .text {
+    font-size: 22px;
+  }
+
+  .detail .text a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .email-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .email-wrapper .email {
+    padding: 9px 16px;
+    height: 44px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 0.5rem;
+    color: var(--font-color);
+    border: 1px solid var(--glass-border);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .email-wrapper .email span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .email-wrapper .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .email-wrapper .buttons .icon {
+    padding: 12px 16px;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-button-2);
+    color: var(--bg-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      margin: 5rem auto;
+    }
+
+    .container .description {
+      font-size: 21px;
+    }
+
+    .links .icon {
+      font-size: 14px;
+    }
+
+    .detail .text {
+      font-size: 16px;
+    }
+
+    .email-wrapper .email {
+      font-size: 16px;
+    }
+  }
+</style>

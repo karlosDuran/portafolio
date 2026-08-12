@@ -1,0 +1,181 @@
+{
+  "LANGUAGE": "es",
+  "SEO_TITLE": "Karlos Duran - Portfolio",
+  "SEO_DESCRIPTION": "Explora mi portafolio para ver mis proyectos y habilidades. Soy un desarrollador full-stack y me encanta crear sitios web y aplicaciones.",
+  "HERO_SECTION": {
+    "TITLE": "¡Hola!",
+    "TITLE_NAV": "Inicio",
+    "SUBTITLE_NORMAL": "Soy",
+    "SUBTITLE_EMPHASIS": "Karlos Duran",
+    "JOB_TITLE": "Desarrollador",
+    "CV": {
+      "BTN_TEXT": "Descargar CV",
+      "FILENAME": "karlos-duran-cv-es.pdf",
+      "PATH": "pdf/karlos-duran-cv-es.pdf",
+      "ARIA_LABEL": "Descargar CV de Karlos Duran en español"
+    },
+    "IMAGE": {
+      "ALT": "Karlos Duran - Desarrollador"
+    }
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "Sobre mí",
+    "DESCRIPTION_1": "Soy estudiante de Ingeniería de Software orientado a la resolución técnica y la calidad de la información. Mi experiencia como <strong>Desarrollador Full Stack</strong> me ha permitido trabajar bajo metodologías ágiles, colaborando en el manejo de datos con MySQL y su vinculación con sistemas en PHP.",
+    "DESCRIPTION_2": "Tengo dominio de entornos <strong>Linux</strong>, contenedores con <strong>Docker</strong> y control de versiones con Git. Cuento con certificaciones de <strong>Google Cybersecurity</strong>, <strong>AWS Cloud Foundations</strong> y Cisco Networking Basics. Inglés B2 (certificación iTEP Plus).",
+    "DESCRIPTION_3": "Actualmente en búsqueda de oportunidades donde pueda aplicar mis conocimientos en <strong>desarrollo web y administración de sistemas</strong> para crear soluciones que generen impacto real.",
+    "IMAGE": {
+      "ALT": "Karlos Duran - Sobre mí"
+    }
+  },
+  "EXPERIENCE_SECTION": {
+    "TITLE": "Experiencia",
+    "JOBS": [
+      {
+        "COMPANY": "Centro de Investigaciones Regionales \"Dr. Hideyo Noguchi\"",
+        "ROLE": "Desarrollador Full Stack",
+        "DURATION": "Septiembre 2025 - Agosto 2026",
+        "BULLETS": [
+          "Integración de datos: Programación de seeders y scripts para inyección estructurada de datos en MySQL.",
+          "Desarrollo y soporte: Integración de bases de datos con sistemas PHP (PDO) para asegurar continuidad de servicios.",
+          "Metodología: Gestión de requerimientos e incidencias con Scrum y Jira.",
+          "Infraestructura: Despliegue de entornos en Docker y uso de Linux."
+        ]
+      }
+    ]
+  },
+  "SKILLS_SECTION": {
+    "TITLE": "Habilidades",
+    "TITLES": {
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend / BD",
+      "OTHERS": "Herramientas",
+      "LEARNING": "Aprendiendo"
+    }
+  },
+  "PORTFOLIO_SECTION": {
+    "TITLE": "Proyectos",
+    "BUTTONS": {
+      "BTN_GITHUB": "Código",
+      "BTN_PRODUCTION": "Demo",
+      "BTN_MORE_PROJECTS": "Ver más..."
+    },
+    "PROJECTS": [
+      {
+        "name": "Sistema de Control Escolar",
+        "description": "Plataforma educativa desarrollada de forma colaborativa utilizando TypeScript, con despliegue y estandarización del entorno mediante Docker.",
+        "image": "images/portfolio/control-escolar-web.png",
+        "technologies": [
+          {
+            "name": "TypeScript",
+            "image": "ts.svg"
+          },
+          {
+            "name": "Docker",
+            "image": "docker.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/team-ControlAcademico/controlEscolar-web",
+        "urlProduction": ""
+      },
+      {
+        "name": "Gestor de Citas Médicas",
+        "description": "Aplicación web construida con PHP, Laravel y Blade para la gestión de información y consultas médicas, implementada en contenedores con Docker.",
+        "image": "images/portfolio/doctor-appointment-app.jpg",
+        "technologies": [
+          {
+            "name": "PHP",
+            "image": "php.svg"
+          },
+          {
+            "name": "Laravel",
+            "image": "laravel.svg"
+          },
+          {
+            "name": "Blade",
+            "image": "blade.svg"
+          },
+          {
+            "name": "Docker",
+            "image": "docker.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/karlosDuran/doctor-appointment-app",
+        "urlProduction": ""
+      },
+      {
+        "name": "Market App",
+        "description": "Backend para aplicación de comercio electrónico con carrito de compras y catálogo de productos.",
+        "image": "images/portfolio/market-app.jpg",
+        "technologies": [
+          {
+            "name": "Java",
+            "image": "java.svg"
+          }
+        ],
+        "urlGithub": "https://github.com/karlosDuran/market-app",
+        "urlProduction": ""
+      },
+      {
+        "name": "Convertnut Web",
+        "description": "Plataforma web para la conversión y gestión de diferentes formatos de datos. (Desarrollado como parte de mi experiencia laboral)",
+        "image": "images/portfolio/convertnut.png",
+        "technologies": [
+          {
+            "name": "TypeScript",
+            "image": "ts.svg"
+          },
+          {
+            "name": "HTML",
+            "image": "html.svg"
+          },
+          {
+            "name": "CSS",
+            "image": "css.svg"
+          },
+          {
+            "name": "PrimeNG",
+            "image": "primeng.svg"
+          },
+          {
+            "name": "CakePHP 2.2",
+            "image": "cakephp.svg"
+          },
+          {
+            "name": "PHP",
+            "image": "php.svg"
+          }
+        ],
+        "urlGithub": "",
+        "urlProduction": ""
+      },
+      {
+        "name": "SACPUVE Android",
+        "description": "Aplicación móvil para Android enfocada en el control y gestión del sistema SACPUVE. (Desarrollado como parte de mi experiencia laboral)",
+        "image": "images/portfolio/sacpuve-android.png",
+        "technologies": [
+          {
+            "name": "Java",
+            "image": "java.svg"
+          },
+          {
+            "name": "Android SDK 36",
+            "image": "android.svg"
+          }
+        ],
+        "urlGithub": "",
+        "urlProduction": ""
+      }
+    ]
+  },
+  "CONTACT_SECTION": {
+    "TITLE": "Contáctame",
+    "DESCRIPTION": "Actualmente estoy buscando nuevas oportunidades, ¡mi correo electrónico siempre está abierto!"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Diseñado y Construido con ❤️ por"
+  },
+  "THEME": {
+    "DARK_THEME": "Tema oscuro",
+    "LIGHT_THEME": "Tema claro"
+  }
+}

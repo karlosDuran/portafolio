@@ -1,0 +1,110 @@
+---
+import BriefcaseIcon from './icons/briefcase-icon.astro';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
+const jobs = i18n.EXPERIENCE_SECTION.JOBS;
+---
+
+<section id="experience">
+  <span class="title">
+    <BriefcaseIcon />
+    {i18n.EXPERIENCE_SECTION.TITLE}
+  </span>
+
+  <div class="jobs">
+    {
+      jobs.map((job) => (
+        <div class="job">
+          <div class="job-header">
+            <h3>{job.COMPANY}</h3>
+            <span class="duration">{job.DURATION}</span>
+          </div>
+          <h4 class="role">{job.ROLE}</h4>
+          <ul class="bullets">
+            {job.BULLETS.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section#experience {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .job {
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+
+  .job:hover {
+    transform: translateY(-5px);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .job-header h3 {
+    font-size: 1.5rem;
+    color: var(--font-color);
+  }
+
+  .duration {
+    font-size: 0.9rem;
+    color: var(--font-color-1);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .role {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .bullets {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--font-color-1);
+  }
+
+  .bullets li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .job-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
