@@ -1,30 +1,47 @@
 <div align="center">
-  <img
-    alt="weekly-challenges"
-    src="https://res.cloudinary.com/dfeujtobk/image/upload/v1705960644/Portfolio/840shots_so_d3ber6.png"
-    width="1200"
-    style="border-radius: 1rem" />
-
-  <br />
-  <br />
-
-  <h1> 💼 Portfolio</h1>
-  <a href="https://marco-cruz.netlify.app/" target="_blank">View portfolio</a>
-  <br/><br/>
-
-  ![Version](https://img.shields.io/github/package-json/v/marcode24/portfolio?style=popout&logo=npm)
-  ![GitHub CI Workflow Status](https://img.shields.io/github/actions/workflow/status/marcode24/portfolio/linter.yml?branch=main&style=popout&logo=testcafe&label=linter)
-  ![GitHub repo size](https://img.shields.io/github/repo-size/marcode24/portfolio?style=popout&logo=github&label=repo%20size)
-  ![GitHub](https://img.shields.io/github/license/marcode24/portfolio?style=popout&logo=github&label=license)
-  ![GitHub Repo stars](https://img.shields.io/github/stars/marcode24/portfolio?style=popout&logo=apachespark&color=yellow&logoColor=yellow)
-  ![Github repo views](https://img.shields.io/github/search/marcode24/portfolio/portfolio?style=popout&logo=github&label=repo%20views)
-  ![GitHub last commit](https://img.shields.io/github/last-commit/marcode24/portfolio?style=popout&logo=git&label=last%20commit)
+  <h1>💼 Portafolio de Karlos Duran</h1>
+  <p><strong>Desarrollador Full Stack</strong></p>
+  
+  [![GitHub CI Workflow Status](https://img.shields.io/github/actions/workflow/status/karlosDuran/portafolio/linter.yml?branch=main&style=popout&logo=testcafe&label=linter)](https://github.com/karlosDuran/portafolio/actions)
+  [![GitHub repo size](https://img.shields.io/github/repo-size/karlosDuran/portafolio?style=popout&logo=github)](https://github.com/karlosDuran/portafolio)
+  [![GitHub](https://img.shields.io/github/license/karlosDuran/portafolio?style=popout&logo=github)](./LICENSE)
 </div>
 
-## 🚀 Description
+## 🚀 Descripción
 
-This is my personal portfolio, where you can find my projects, skills, and contact information.
+Este es mi portafolio web personal, construido con **Astro**, **Svelte** y **CSS Moderno**. Aquí detallo mi experiencia profesional, habilidades técnicas, y destaco mis 5 proyectos más importantes (incluyendo sistemas de Control Escolar, Gestor de Citas Médicas, y aplicaciones para Android).
 
-## 📝 License
+Soy estudiante de Ingeniería de Software orientado a la resolución técnica y la calidad de la información. Me especializo en el desarrollo Full Stack manejando bases de datos relacionales, lenguajes como Java, PHP, TypeScript, y despliegue en contenedores Docker.
 
-This project is under the [MIT](./LICENSE) license. See the LICENSE for more information. 😉
+## 🛠️ Stack Tecnológico
+
+- **Framework Web:** [Astro](https://astro.build/)
+- **Interactividad:** [Svelte](https://svelte.dev/)
+- **Estilos:** CSS (Diseño Glassmorphism y temas personalizables)
+- **Despliegue:** Integración continua a través de GitHub Actions
+
+## ⚙️ Ejecución Local
+
+Si deseas probar el portafolio en tu entorno local:
+
+1. Clona este repositorio:
+   ```bash
+   git clone git@github.com:karlosDuran/portafolio.git
+   ```
+2. Instala las dependencias (se requiere Node.js):
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre tu navegador en `http://localhost:4321`.
+
+## 📬 Contacto
+
+- **GitHub:** [@karlosDuran](https://github.com/karlosDuran)
+
+## 📝 Licencia
+
+Este proyecto es Open Source bajo la licencia [MIT](./LICENSE).
