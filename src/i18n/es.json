@@ -80,7 +80,7 @@
       {
         "name": "Gestor de Citas Médicas",
         "description": "Aplicación web construida con PHP, Laravel y Blade para la gestión de información y consultas médicas, implementada en contenedores con Docker.",
-        "image": "images/portfolio/doctor-appointment-app.jpg",
+        "image": "images/portfolio/doctor-appointment-app.png",
         "technologies": [
           {
             "name": "PHP",

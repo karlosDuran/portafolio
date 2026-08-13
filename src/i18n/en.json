@@ -80,7 +80,7 @@
       {
         "name": "Medical Appointments Manager",
         "description": "Web application built with PHP, Laravel and Blade for information and consultation management, deployed in Docker containers.",
-        "image": "images/portfolio/doctor-appointment-app.jpg",
+        "image": "images/portfolio/doctor-appointment-app.png",
         "technologies": [
           {
             "name": "PHP",
