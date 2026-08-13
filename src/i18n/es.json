@@ -101,7 +101,7 @@
       {
         "name": "Market App",
         "description": "Backend para aplicación de comercio electrónico con carrito de compras y catálogo de productos.",
-        "image": "images/portfolio/market-app.jpg",
+        "image": "images/portfolio/market-app.png",
         "technologies": [
           {
             "name": "Java",

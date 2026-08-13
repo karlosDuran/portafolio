@@ -101,7 +101,7 @@
       {
         "name": "Market App",
         "description": "E-commerce application backend with shopping cart and product catalog.",
-        "image": "images/portfolio/market-app.jpg",
+        "image": "images/portfolio/market-app.png",
         "technologies": [
           {
             "name": "Java",
