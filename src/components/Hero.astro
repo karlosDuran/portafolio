@@ -24,8 +24,8 @@ const i18n = getI18n({ currentLocale });
     <div class="bottom">
       <a
         class="btn"
-        href="pdf/cv.pdf"
-        download="cv - marco cruz.pdf"
+        href={`/${i18n.HERO_SECTION.CV.PATH}`}
+        download={i18n.HERO_SECTION.CV.FILENAME}
         aria-label={i18n.HERO_SECTION.CV.ARIA_LABEL}
       >
         {i18n.HERO_SECTION.CV.BTN_TEXT}
